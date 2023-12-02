@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="title"> Steven's Survey Form</h1>
+    <p id="description"> Thank you for looking at my portfolio! </p>
+    <form id="survey-form"> 
+
+    <input id="name" required type="text" placeholder="Steven N."></input>
+
+    <input id="email" required type="email" 
+placeholder="example@gmail.com"></input>
+
+    <input id="number" required type="number"
+    placeholder="21" min="1" max="99"></input>
+
+    <label id="name-label"> First and Last Name </label>
+
+    <label id="email-label"> Preffered Email</label>
+
+    <label id="number-label">Age</label>
+
+<select id="dropdown">
+        <option value="">(select one)</option>
+        <option value="1"> Money Tracker </option>
+        <option value="2"> Treasure Game </option>
+        <option value="3">Movie List</option>
+        <option value="4">Other</option>
+
+<label for="Personal"><input id="personal" type="radio" name="visit-type" class="inline"
+value="1" /> Personal Portfolio Visit</label>
+        <label for="business"><input id="business" type="radio" name="visit-type" class="inline"
+value="2" /> Business Portfolio Visit</label>
+
+How else can I improve my projects?
+
+<label for="transition">
+          <input id="transition" type="checkbox" required name="transition" class="inline"
+value="1" /> Transition
+        </label>
+
+<label for="format">
+          <input id="format" type="checkbox" required name="format" class="inline" value="2" /> Format
+        </label>
+
+<label for="other">
+          <input id="other" type="checkbox" required name="other"
+value="3" class="inline" /> Other
+
+<textarea id="otherbio" name="otherbio" rows="3" cols="30" placeholder="An improvement I would like too see..."></textarea>
+
+<input type="submit" value="submit"
+id="submit" />
+        </label>
+
+
+    </select>
+
+    </form>
+    
+</body>
+</html>
