@@ -3,43 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name's Bio</title>
-  <link rel="stylesheet" href="styles_1.css">
+  <title>I'm Steven! A pleasure to meet you!</title>
+  <link rel="stylesheet" href="shstyle.css">
+
+  
+  <style>
+    body {
+      font-family: "Times New Roman", sans-serif;
+    }
+
+    .pages {
+      display: flex;
+    }
+
+    .page {
+      padding: 10px 20px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    .page:hover {
+      background-color: #ccc;
+    }
+
+    .page-content {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+    
+  </style>
 </head>
 <body>
-  <header>
-      <img src="profile-picture.png" alt="Your Name" class="profile-img">
-      <h1>Your Name</h1>
+
+  <div class="pages">
+    <div class="page" onclick="openPage('page1')">Home</div>
+    <div class="page" onclick="openPage('page2')">About Me &amp; My Goals</div>
+    <div class="page" onclick="openPage('page3')">Languages &amp; Experience</div>
+    <div class="page" onclick="openPage('page4')">Projects</div>
+    <div class="page" onclick="openPage('page5')">Contact me</div>
+
+  </div>
+
+  <div id="page1" class="page-content active">
+    <header>
+      <img src="profile-picture.png" alt="Steven Nguyen" class="profile-img">
+      <h1>Steven Nguyen</h1>
       <p>Web Developer, Programmer, and Tech Student</p>
       <p>Follow me on social media:</p>
       <p>
-          <a href="https://twitter.com/yourusername"
-          target="_blank">Twitter</a> |
+          <a href="https://twitter.com/ohgeezitssteve"
+          target="_blank">X Page</a> |
           <a href="https://linkedin.com/in/yourusername"
           target="_blank">LinkedIn</a>
       </p>
   </header>
-  <main>
-      <section class="bio">
-          <h2>About Me</h2>
-          <p>Hello! I'm Your Name, a web developer with a passion
-              for front-end design and user experience.
-              I've been building websites for over 5 years
-                and love what I do.</p>
-          <!-- Add more paragraphs as needed -->
-      </section>
-      <section class="projects">
+  </div>
+
+  <div id="page2" class="page-content">
+    <h2>Who am I?</h2>
+    <p>Am I Steven Nguyen because I'm an engineer or Am I an engineer, because I'm Steven Nguyen?</p>
+  </div>
+
+  <div id="page3" class="page-content">
+    <h2>My 1's and 0's</h2>
+    <p> I am funial in Vietnamese and English as well as certianly pursueing Spanish</p>
+  </div>
+  
+  <div id="page4" class="page-content">
+    
+    <section class="projects">
           <h2>Projects</h2>
           <ul>
+			  <section> Java </section>
+              <li><a href="#">Chess</a></li>
+              <li><a href="#">Project Two</a></li>
+              <li><a href="#">Project Three</a></li>
+              <section2> Python </section2>
+              <li><a href="#">Project One</a></li>
+              <li><a href="#">Project Two</a></li>
+              <li><a href="#">Project Three</a></li>
+              <section> Swift </section>
+              <li><a href="#">Time to Go</a></li>
+              <section> HTML &amp; CSS </section>
               <li><a href="#">Project One</a></li>
               <li><a href="#">Project Two</a></li>
               <li><a href="#">Project Three</a></li>
               <!-- Add more list items as needed -->
           </ul>
       </section>
-  </main>
-  <footer>
-      <p>Contact me at <a href="mailto:your.name@example.com">your.name@example.com</a></p>
-  </footer>
+    </div>
+    
+  <div id="page5" class="page-content active">
+    
+    
+    
+    
+    
+    
+   <h1 id="title"> Steven's Survey Form</h1>
+   
+     <button id="downloadButton">Take a look at my Resume!</button>
+
+ <script>
+    // Function to create and download a text file
+    function downloadTextFile() {
+      // Create a Blob containing the text
+      var textContent = "Hello, this is the content of the text file.";
+      var blob = new Blob([textContent], { type: "text/plain" });
+
+      // Create a link element
+      var a = document.createElement("a");
+
+      // Set the download attribute with the desired file name
+      a.download = "example.txt";
+
+      // Create a URL for the Blob and set it as the href attribute
+      a.href = URL.createObjectURL(blob);
+
+      // Append the link to the document body
+      document.body.appendChild(a);
+
+      // Trigger a click event on the link to start the download
+      a.click();
+
+      // Remove the link from the document
+      document.body.removeChild(a);
+    }
+
+    // Attach the downloadTextFile function to the button click event
+    document.getElementById("downloadButton").addEventListener("click", downloadTextFile);
+  </script>
+
+
+
+    <p id="description"> Thank you for looking at my portfolio! </p>
+    <form id="survey-form"> 
+
+    <input id="name" required type="text" placeholder="Steven N."></input>
+
+    <input id="email" required type="email" 
+placeholder="example@gmail.com"></input>
+
+    <input id="number" required type="number"
+    placeholder="21" min="1" max="99"></input>
+
+    <label id="name-label"> First and Last Name </label>
+
+    <label id="email-label"> Preffered Email</label>
+
+    <label id="number-label">Age</label>
+
+<select id="dropdown">
+        <option value="">(select one)</option>
+        <option value="1"> Money Tracker </option>
+        <option value="2"> Treasure Game </option>
+        <option value="3">Movie List</option>
+        <option value="4">Other</option>
+
+<label for="Personal"><input id="personal" type="radio" name="visit-type" class="inline"
+value="1" /> Personal Portfolio Visit</label>
+        <label for="business"><input id="business" type="radio" name="visit-type" class="inline"
+value="2" /> Business Portfolio Visit</label>
+
+How else can I improve my projects?
+
+<label for="transition">
+          <input id="transition" type="checkbox" required name="transition" class="inline"
+value="1" /> Transition
+        </label>
+
+<label for="format">
+          <input id="format" type="checkbox" required name="format" class="inline" value="2" /> Format
+        </label>
+
+<label for="other">
+          <input id="other" type="checkbox" required name="other"
+value="3" class="inline" /> Other
+
+<textarea id="otherbio" name="otherbio" rows="3" cols="30" placeholder="An improvement I would like too see..."></textarea>
+
+<input type="submit" value="submit"
+id="submit" />
+        </label>
+
+
+    </select>
+
+    </form>
+    
+    
+    
+    
+    
+    
+  </div>
+
+  <script>
+    function openPage(pageId) {
+      // Hide all tab contents
+      var pageContents = document.getElementsByClassName('page-content');
+      for (var i = 0; i < pageContents.length; i++) {
+        pageContents[i].style.display = 'none';
+      }
+
+      // Remove 'active' class from all tabs
+      var pages = document.getElementsByClassName('page');
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('active');
+      }
+
+      // Display the selected tab content and mark the tab as active
+      document.getElementById(pageId).style.display = 'block';
+      document.querySelector('[onclick="openPage(\'' + pageId + '\')"]').classList.add('active');
+    }
+  </script>
+
 </body>
 </html>
